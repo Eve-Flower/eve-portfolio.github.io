@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Writings page for Eve Delgado's portfolio website. Here, you can find out more about her writing.">
+    <title>Writings</title>
+    <link rel="stylesheet" href="styling/styles.css"">
+    <link rel="stylesheet" href="styling/anims.css"">
+    <link rel="stylesheet" href="styling/writing-styles.css"">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 
+        Header section. Responsive navbar on line 25
+    -->
+    <header class="header">
+        <a href="index.html"><span id="logo">Eve</span></a>
+        <nav id="mytopnav" class="navbar">
+          
+            <a href="index.html">Home</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Writings.html" class="active">My Writings</a>
+            <form action="">
+                <label for="theme" class="theme-label">Theme</label>
+                  <select name="theme-name" id="theme-menu" onchange="set()">
+                    <option value="default">Default</option>
+                    <option value="dark">Dark</option>
+                    <option value="deuteranopia" >deuteranopia</option>
+                    <option value="grayscale">grayscale</option>
+                  </select>
+                
+              </form>
+            <a href="javascript:void(0);" class="icon" onclick="navbarFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <div class="page-container">
+        
+        
+         <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <h3>My stomach dropped as I realized it wasn’t over. The world slowed as he angled the pistol my way. Two rounds boomed out as I tried to dodge away, my ears were ringing as the headrest was nearly torn to shreds. I tried to headbutt him through it in a panic, but he didn’t budge. He fired again and I felt something go through my face. It was silent, my ears not making out anything.</h3>
+      
+    </div>
+  
+    <div class="mySlides fade">
+        <h3>I stabbed the Maxdoc into me and felt a surge of energy as some clarity was restored. My chest puffed up as my internals shifted back into place. I let out a breath as I felt the bones in my jaw shift and the hole in my face slowly knit itself back together through the coagulated blood. </h3>
+      
+    </div>
+
+    <div class="mySlides fade">
+      <h3>“It was bullshit. Max fancies himself a fixer now. Paid me 10 percent and hid behind the fucking borgs like the tinydick he is. The ungrateful fuck. I was with him before his shitty club took off, and he aint get through his skull where he came from!” She ground out, and I could smell the alcohol in her breath as spittle mixed with the blood on my face. She paused, and her expression became venomous.</h3>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  
+  
+  <div class="writings-box"> 
+        <h1>My Writings</h1>
+        <div class="fiction-container">
+            <div class="fiction-1">
+                <div>
+                    
+                    <div class="title"><h2>Book 1</h2></div>
+                    <div class="synopsis"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates tenetur architecto maxime necessitatibus aliquam, incidunt facere eveniet!</p></div>
+                    <br>
+                </div>
+            </div>
+                
+                <div class="fiction-picture">
+                    <a href=""><img src="images/the-butterfly-of-night-city-aadab0o0pbq.jpg" alt="Placeholder image for book"></a>
+                    <div id="read-follow">
+                        <h3><a href="">Read</a></h3>
+                        <h3><a href="">Follow</a></h3>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <script>
+        var theme = document.getElementById('theme-menu');
+        //get theme option selected
+        var value = theme.value;
+        // Get the root element
+        var root = document.documentElement;
+        // Get the computed styles of the root element
+        var styles = window.getComputedStyle(root);
+        
+        theme.value = localStorage.getItem('theme');
+        set();
+        function set(){
+            //set localstorage to keep variable through page
+            
+            console.log('Set ran. Set value:',theme.value);
+                if (theme.value =='default'){
+                //set main color
+                console.log('theme value now on default is: ', theme.value)
+                localStorage.setItem('theme', 'default');
+                if (styles.getPropertyValue('--main-color') != '--pink-main'){
+                    console.log('property value of main is pink so is true ');
+                    document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    //set gradient colors to default values
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(255, 220, 253)');
+                    document.documentElement.style.setProperty('--gradient-2','rgb(236, 241, 250)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(255, 227, 227)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(253, 190, 190)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(255, 157, 157)');
+                //set 
+                }
+                
+                }if (theme.value =='dark'){
+                localStorage.setItem('theme', 'dark');
+                document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    if(styles.getPropertyValue('--main-color') != 'dark'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(78,78,78)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(180,180,180)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(255,255,255)');
+                    
+                    }
+                    
+                }if (theme.value =='deuteranopia'){
+                    localStorage.setItem('theme', 'deuteranopia');
+                    if (styles.getPropertyValue('--main-color') != '--deuteranopia-main'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(219,076,119)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(99,158,158)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(016,085,154)');
+                    }
+                
+                }if (theme.value =='grayscale'){
+                localStorage.setItem('theme', 'grayscale');
+                if (styles.getPropertyValue('--main-color') != '--light-var'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(150,150,150)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(200,200,200)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(78,78,78)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(180,180,180)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(255,255,255)');
+                }
+                
+                }
+            }
+        
+  
+    </script>
+    <script src="Scripts/Scripts.js"></script>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <script src="Scripts/gsap.min.js"></script>
+    <script src="Scripts/paper-core.min.js"></script>
+    <script src="Scripts/simplex-noise.min.js"></script>
+    <script src="Scripts/jquery.serialcursor.js"></script>
+    <script>
+    $(document).ready(function(){
+        // jquery.serialcursor initialisation
+        $('#serialcursor').serialcursor();
+        $(".page-container").fadeOut(5);
+        $(".page-container").fadeIn(300);
+    });
+    </script>
+</body>
+</html>

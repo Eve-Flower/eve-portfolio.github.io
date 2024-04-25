@@ -1,0 +1,238 @@
+* {
+    margin-bottom: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+    scroll-behavior: smooth;
+
+}
+body {
+    background-color: var(--bg-color);
+}
+:root {
+    --bg-color: rgba(255, 255, 255, 0.582);
+    --second-bg-color: rgb(32, 32, 32);
+    --text-color: rgb(255, 255, 255);
+    --hover-color: pink;
+    --pink-main: rgb(255, 157, 157);
+    --main-color: rgb(255, 157, 157);
+    --gradient-1: rgb(255, 220, 253);
+    --gradient-2: rgb(236, 241, 250);
+    --gradient-3: rgb(255, 227, 227);
+    --gradient-4: rgb(253, 190, 190);
+    --dark_variable: black;
+    --light-var: rgb(255, 255, 255);
+    --deuteranopia-main: rgb(219,076,119);
+    --deuteranopia-secondary: rgb(016,085,154);
+
+
+
+}   
+#page-container{
+    height: 100%;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    padding: 1rem 9%;
+    margin-bottom: 0rem;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    z-index: 2;
+    background-color: var(--second-bg-color);
+}
+
+.landing-content{
+    margin-top: 5rem;
+    display: flex;
+    justify-content:left;
+    align-items:flex-start;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-left: 10rem;
+    padding-right:10rem;
+    position: relative;
+    z-index: 2;
+}
+#intro-text{
+    font-size: 5rem;
+    padding-right: 10px;
+}
+.pink{
+    color: var(--main-color);
+}
+#logo {
+    font-size: 2rem;
+    color: azure;
+    position: relative;
+    bottom:0;
+}
+/* footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    margin-top: 1rem;
+    display: flex;
+    color: var(--light_var);
+    background-color: var(--second-bg-color);
+}
+footer a{
+    color:inherit; 
+} */
+    
+/*Theme text color*/
+
+.theme-label {
+    color: white;
+}
+nav a{
+    font-size: 1.5rem;
+    padding-left: 10px;
+    color: azure;
+}
+.active{
+    color: var(--pink-main);
+    font-size: 1.7rem;
+}
+.active:hover, nav a:hover {
+    color: var(--hover-color);
+}
+
+.contact-content {
+    margin-top: 10rem;
+}
+#logo:hover {
+    color: var(--main-color);
+}
+.interest-text{
+    font-size: 200%;
+}
+.social-links{
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    color: var(--dark_variable);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 40px;
+    width: 10%vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    
+}
+.social-links a{
+    padding-left: 10px;
+    color: var(--second-bg-color);
+}
+.social-links a:hover{
+    color: var(--main-color);
+}
+.project-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+
+    
+}
+.project-container button:hover{
+    background-color: var(--main-color);
+}
+#about-section {
+    height: 2rem;
+    width: 4rem;
+    background-color: var(--light_var);
+    
+}
+/*kitten draggable and link to contact*/
+.kitty a{
+    
+    height: 15rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: row-reverse;
+    
+
+}
+#draggable-cat {
+    width: 15%;
+    height: 100%;
+    padding-right: 5%;
+    z-index: 2;
+    
+}
+
+
+
+/* Hide the link that should open and close the navbar on small screens */
+.navbar .icon {
+    display: none;
+  }
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) 
+    also, make cat a little bigger!*/
+ @media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+    #draggable-cat{
+        width: 22%;
+    }
+  }
+  
+  /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  } 
+
+.about-me {
+    width: 30rem;
+    height: 15rem;
+    background-color: var(--second-bg-color);
+    border: 2px solid var(--dark_variable);
+    outline: 2px;
+    background-color: rgb(255, 163, 163);
+    
+  }
+  /*Begin serial cursor css declarations*/
+
+/* JavaScript: serialcursor */
+#serialcursor{pointer-events:none;}
+#serialcursor-inner{position:fixed;z-index:13;width:80px;height:80px;margin:-40px 0 0 -40px;opacity:0.2;transition:opacity 900ms;}
+#serialcursor-pointer{position:fixed;z-index:13;height:8px;width:8px;transform:translate(-50%, -50%);background-color:#bc2d39;border-radius:100%;transition:200ms;}
+#serialcursor.on-mousemove #serialcursor-inner{opacity:.6;}
+#serialcursor.is-click #serialcursor-inner{opacity:1;}
+#serialcursor.is-click #serialcursor-pointer{transform:translate(-50%, -50%) scale(0.75);}
+#serialcursor-pointer-grab{opacity:0;transition:opacity 400ms;}
+#serialcursor-pointer-grab .sub-icon{position:absolute;top:-2px;width:6px;height:14px;fill:#bc2d39;transition:400ms;}
+#serialcursor-pointer-grab .sub-icon.is-left{left:-5px;}
+#serialcursor-pointer-grab .sub-icon.is-right{right:-5px;}
+#serialcursor.is-grab #serialcursor-pointer-grab{opacity:1;}
+#serialcursor.is-grab #serialcursor-pointer-grab .sub-icon{fill:#fff;}
+#serialcursor.is-grab #serialcursor-pointer-grab .sub-icon.is-left{left:-16px;}
+#serialcursor.is-grab #serialcursor-pointer-grab .sub-icon.is-right{right:-16px;}
+[data-serialcursor-state='grab']{cursor:grab;}

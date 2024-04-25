@@ -1,0 +1,203 @@
+.contact-info{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.resume-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 66.66%;
+    
+}
+.page-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contact-details{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 33.33%;
+    margin-right: 1rem;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.card2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 66.66%;
+    padding-bottom: 5rem;
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+}
+.slight-background{
+    opacity: 75%;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 0;
+    text-decoration: solid;
+}
+.course-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 33.333%;
+    font-size: 1.1rem;
+    position: relative;
+    top: 0;
+    width: 20px;
+}
+table th {
+    font-size: 1.4rem;
+    
+}
+table tr {
+    font-size: 1.2rem;
+    width: 150%;
+}
+.course-container table {
+    overflow: hidden;
+    
+}
+.education{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+    
+}
+.education div{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    padding-left: -10px;
+
+}
+#date{
+    padding-left: 10px;
+}
+ul {
+    list-style-type: none;
+    
+
+}
+ul a{
+    color: pink;
+}
+.cling-to-top{
+    margin-top: -15px;
+}
+
+div.gallery {
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  
+div.gallery:hover {
+    border: 1px solid #ff9e9e ;
+  }
+  
+div.gallery img {
+    width: 100%;
+    height: 6rem;
+    
+    background-color: black;
+  }
+
+div.desc {
+    text-align: center;
+    height: 6rem;
+    width: 100%;
+  }
+
+.contact-cta a, a{
+    text-decoration: none;
+    color: pink;
+}
+.contact-cta a:hover, a:hover  {
+    color: rgb(255, 138, 157);
+}
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+    
+  }
+  
+@media only screen and (max-width: 1400px) {
+    ul a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+}
+@media only screen and (max-width: 1000px){
+    
+    table th {
+        font-size: 0.9rem;
+        
+    }
+    table tr {
+        font-size: 0.7rem;
+        
+    }
+    table {
+        width: 2rem;
+        margin-top: -15rem;
+    }
+    
+}
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 1200px){
+    
+    .page-container{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        
+    }
+    
+  }
+  @media only screen and (min-width: 700px) and (max-width: 1200px){
+    .responsive {
+       width: 49.99%;
+    }
+  }  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }

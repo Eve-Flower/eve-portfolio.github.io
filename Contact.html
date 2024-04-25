@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page for Eve Delgado's portfolio website. Here, you can send emails directly to her using the form.">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styling/styles.css"">
+    <link rel="stylesheet" href="styling/anims.css"">
+    <link rel="stylesheet" href="styling/contact-styles.css"">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 
+        Contact Page layout:
+        navbar
+        left side of page will say: Want to contact me? and then go into how contacting me can help and how to contact (simpyl fill in the form on the right and I'll get an email)
+        right side of page is a form (in its infancy), with a first name, email, and what they want to say. This will be sent to my email
+        there will be a thank you for sending popup or page shift after the user sends the message so they know it went through.
+    -->
+    <header class="header">
+        <a href="index.html"><span id="logo">Eve</span></a>
+        <nav id="mytopnav" class="navbar">
+          
+            <a href="index.html">Home</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Contact.html" class="active">Contact</a>
+            <a href="Writings.html">My Writings</a>
+            <form action="">
+                <label for="theme" class="theme-label">Theme</label>
+                  <select name="theme-name" id="theme-menu" onchange="set()">
+                    <option value="default">Default</option>
+                    <option value="dark">Dark</option>
+                    <option value="deuteranopia" >deuteranopia</option>
+                    <option value="grayscale">grayscale</option>
+                  </select>
+                
+              </form>
+            <a href="javascript:void(0);" class="icon" onclick="navbarFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+          
+        </nav>
+    </header>
+    <div class="contact-container ">
+        <div class="contact-content slight-background">
+            
+            <div class="contact-text">
+                <div>
+                    <h1>Need to talk?</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A debitis nostrum quia officiis, necessitatibus laborum inventore maiores quisquam dolores error possimus nemo magnam molestiae natus, dolorem cum quo in perspiciatis?</p>
+                </div>
+                <img src="images\kisspng-computer-icons-email-icon-design.jpg" alt="Picture of mail">
+                
+            </div>
+
+            <div class="contact-form">
+                <form action="mailto:evelyn.mdd@outlook.com" method="post" enctype="text/plain">
+                    <label for="fname">Name:</label>
+                    <br>
+                    
+                    <input type="text" name="name" placeholder="Your name...">
+
+                    <br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="subject" name="subject" placeholder="Type here..."></textarea><br>
+                    <input type="submit" value="Submit" id="submit-button">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var theme = document.getElementById('theme-menu');
+        //get theme option selected
+        var value = theme.value;
+        // Get the root element
+        var root = document.documentElement;
+        // Get the computed styles of the root element
+        var styles = window.getComputedStyle(root);
+        //case switch to set theme color values on root
+        localStorage.getItem('theme');
+        theme.value = localStorage.getItem('theme');
+        set();
+        function set(){
+            //set localstorage to keep variable through page
+            
+            console.log('Set ran. Set value:',theme.value);
+                if (theme.value =='default'){
+                //set main color
+                console.log('theme value now on default is: ', theme.value)
+                localStorage.setItem('theme', 'default');
+                if (styles.getPropertyValue('--main-color') != '--pink-main'){
+                    console.log('property value of main is pink so is true ');
+                    document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    //set gradient colors to default values
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(255, 220, 253)');
+                    document.documentElement.style.setProperty('--gradient-2','rgb(236, 241, 250)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(255, 227, 227)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(253, 190, 190)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(255, 157, 157)');
+                //set 
+                }
+                
+                }if (theme.value =='dark'){
+                localStorage.setItem('theme', 'dark');
+                document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    if(styles.getPropertyValue('--main-color') != 'dark'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(78,78,78)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(180,180,180)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(255,255,255)');
+                    
+                    }
+                    
+                }if (theme.value =='deuteranopia'){
+                    localStorage.setItem('theme', 'deuteranopia');
+                    if (styles.getPropertyValue('--main-color') != '--deuteranopia-main'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(219,076,119)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(99,158,158)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(016,085,154)');
+                    }
+                
+                }if (theme.value =='grayscale'){
+                localStorage.setItem('theme', 'grayscale');
+                if (styles.getPropertyValue('--main-color') != '--light-var'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(150,150,150)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(200,200,200)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(0,0,0)');
+                    
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(78,78,78)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(180,180,180)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(255,255,255)');
+                }
+                
+                }
+            }
+    </script>
+    <script src="Scripts/Scripts.js"></script>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <script src="Scripts/gsap.min.js"></script>
+    <script src="Scripts/paper-core.min.js"></script>
+    <script src="Scripts/simplex-noise.min.js"></script>
+    <script src="Scripts/jquery.serialcursor.js"></script>
+    <script>
+    $(document).ready(function(){
+        // jquery.serialcursor initialisation
+        $('#serialcursor').serialcursor();
+        $(".contact-container").fadeOut(5);
+        $(".contact-container").fadeIn(300);
+    });
+    </script>
+</body>
+</html>

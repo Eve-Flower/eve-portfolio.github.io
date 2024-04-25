@@ -1,0 +1,292 @@
+<!--
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
+changes to:
+-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Eve's Resume</title>
+    <meta
+      name="description"
+      content="Resume page for Eve Delgado's portfolio website. Does math, software engineering, and writing"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styling/styles.css"" />
+    <link rel="stylesheet" href="styling/anims.css"" />
+    <link rel="stylesheet" href="styling/resume-styles.css"" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Resume layout:
+First, the nav
+Next, we want to have sections containing lists for contact information, summary (maybe), education, projects, and experience.  
+
+Contact info has name, phone number (maybe, because I want to prevent spam), and Email
+Education will have a dropdown menu for recent courses (in the past year) and my Major/minor, and expected dates
+Projects will contain a list of projects, will just put my basic github projects in for now, and plug in this one too, with a placeholder image that I will turn into a hover gif of the project
+Experience can have my work experience as a mechanic and other things (might scrap this section in favor of narrowness)
+
+The end will have a contact me call to action (something like: "link(contact me) to let me know how I can help you")
+
+
+-->
+    <header class="header">
+      <a href="index.html"><span id="logo">Eve</span></a>
+      <nav id="mytopnav" class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Resume.html" class="active">Resume</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Writings.html">My Writings</a>
+        <form action="">
+          <label for="theme" class="theme-label">Theme</label>
+            <select name="theme-name" id="theme-menu" onchange="set()">
+              <option value="default">Default</option>
+              <option value="dark">Dark</option>
+              <option value="deuteranopia" >deuteranopia</option>
+              <option value="grayscale">grayscale</option>
+            </select>
+          
+        </form>
+        <a href="javascript:void(0);" class="icon" onclick="navbarFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <div class="page-container ">
+        <div class="card slight-background ">
+            <div class="contact-details ">
+                <h2>Eve Delgado</h2>
+                <p id="phone number">+1 012-345-6789</p>
+                <ul>
+                    <a href="mailto:evelyn.mdd@outlook.com">Email</a>
+                    <a href="https://www.linkedin.com/in/eve-delgado-00a67a173/" target="_blank">Linkdin</a>
+                    <a href="https://github.com/Eve-Flower" target="_blank">Github</a>
+                    <a href="index.html" target="_blank">Portfolio Site</a>
+                </ul>
+                
+            </div>
+            <h2>Relevant Courses: </h2>
+            <div class="course-container">
+            
+                <table>
+                    <tr>
+                        <th>Course</th>
+                        <th>GPA</th>
+                    </tr>
+                    <tr>
+                        <td>Discrete Math</td>
+                        <td>4.0</td>
+                    </tr>
+                    <tr>
+                        <td>Multivariable Calculus</td>
+                        <td>4.0</td>
+                    </tr>
+                    <tr>
+                        <td>Linear Algebra 1</td>
+                        <td>4.0</td>
+                    </tr>
+                    <tr>
+                        <td>Linear Algebra 2</td>
+                        <td>4.0</td>
+                    </tr>
+                </table>
+                <div>
+                    <h2>Skills</h2>
+                        <ul>
+                            <li>Python</li>
+                            <li>Javascript</li>
+                            <li>Mathematics</li>
+                            <li>Statistical Methods</li>
+                            <li></li>
+                        </ul>
+                </div>
+        </div>
+            </div>
+            
+    <div class="card2 slight-background">    
+        <div class="resume-container">
+            
+        
+            <div class="contact-info">
+                
+                <h2>Education</h2>
+            </div>
+            
+            <div class="education">
+                
+                <div>
+                    <h4>BS. Applied Mathematics <span id="ampersand">&</span> Minor in Computer Science</h4>
+                    <h4 id="date">2022-2025</h4>
+                </div>
+                <div class="cling-to-top">
+                    <p>Athabasca University</p>
+                </div>
+                
+                
+            </div>
+            
+                <h2>Projects</h2>
+                
+                    <div>
+                        <p>Quick link to all my projects: <a href="https://github.com/Eve-Flower" target="_blank">Github</a></p>
+                        <br>
+                    </div>
+            
+            <div>
+                <div class="responsive">
+                    <div class="gallery">
+                      <a target="_blank" href="https://github.com/Eve-Flower/Rock_Paper_Scissors">
+                        
+                        <img src="images/rockpaperscissors.jpg" alt="Image of a hand for Rock, paper, scissors" width="800" height="600">
+                      </a>
+                      <div class="desc"><p>Rock, Paper, Scissors!</p></div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="responsive">
+                    <div class="gallery">
+                      <a target="_blank" href="https://github.com/Eve-Flower/Drum-Kit">
+                        <img src="images/tom2.png" alt="Image of a snare drum" width="800" height="600">
+                      </a>
+                      <div class="desc"><p>Drum Kit</p></div>
+                    </div>
+                  </div>
+                  
+                  <div class="responsive">
+                    <div class="gallery">
+                      <a target="_blank" href="">
+                        <img src="images/v904-nunny-012.jpg" alt="Image of gradient source:https://www.freepik.com/free-vector/gradient-blur-pink-blue-abstract-background_16359095.htm#query=gradient&position=2&from_view=keyword&track=sph&uuid=2e45654f-103f-496e-94c6-318ee611ef54 Image by rawpixel.comon Freepik" width="800" height="600">
+                      </a>
+                      <div class="desc"><p>CSS Background Generator</p></div>
+                    </div>
+                  </div>
+                  
+                  <div class="responsive">
+                    <div class="gallery">
+                      <a target="_blank" href="https://github.com/Eve-Flower/Random-Scripts">
+                        <img src="images/scriptcollection.jpg" alt="Mountains" width="800" height="600">
+                      </a>
+                      <div class="desc"><p>Script Collection</p></div>
+                    </div>
+                  </div>
+                  
+                  <div class="clearfix"></div>
+                </div>
+         
+                
+            
+            
+            
+                
+            <h3>Want me to work for you?</h3>
+            <h2 class="contact-cta"><a href="">Contact Me</a></h2>
+            </div>
+        </div> 
+    </div>
+
+        </div>
+            
+        </div>
+        
+    </div>
+    <script>
+      var theme = document.getElementById('theme-menu');
+      //get theme option selected
+      var value = theme.value;
+      // Get the root element
+      var root = document.documentElement;
+      // Get the computed styles of the root element
+      var styles = window.getComputedStyle(root);
+      //case switch to set theme color values on root
+      localStorage.getItem('theme');
+      theme.value = localStorage.getItem('theme');
+      set();
+        function set(){
+            //set localstorage to keep variable through page
+            
+            console.log('Set ran. Set value:',theme.value);
+                if (theme.value =='default'){
+                //set main color
+                console.log('theme value now on default is: ', theme.value)
+                localStorage.setItem('theme', 'default');
+                if (styles.getPropertyValue('--main-color') != '--pink-main'){
+                    console.log('property value of main is pink so is true ');
+                    document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    //set gradient colors to default values
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(255, 220, 253)');
+                    document.documentElement.style.setProperty('--gradient-2','rgb(236, 241, 250)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(255, 227, 227)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(253, 190, 190)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(255, 157, 157)');
+                //set 
+                }
+                
+                }if (theme.value =='dark'){
+                localStorage.setItem('theme', 'dark');
+                document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    if(styles.getPropertyValue('--main-color') != 'dark'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(255, 157, 157)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(78,78,78)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(180,180,180)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(255,255,255)');
+                    
+                    }
+                    
+                }if (theme.value =='deuteranopia'){
+                    localStorage.setItem('theme', 'deuteranopia');
+                    if (styles.getPropertyValue('--main-color') != '--deuteranopia-main'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(219,076,119)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(016,085,154)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(99,158,158)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(016,085,154)');
+                    }
+                
+                }if (theme.value =='grayscale'){
+                localStorage.setItem('theme', 'grayscale');
+                if (styles.getPropertyValue('--main-color') != '--light-var'){
+                    document.documentElement.style.setProperty('--main-color', 'rgb(150,150,150)');
+                    document.documentElement.style.setProperty('--pink-main', 'rgb(200,200,200)');
+                    document.documentElement.style.setProperty('--hover-color', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-1', 'rgb(0,0,0)');
+                    document.documentElement.style.setProperty('--gradient-2', 'rgb(78,78,78)');
+                    document.documentElement.style.setProperty('--gradient-3', 'rgb(180,180,180)');
+                    document.documentElement.style.setProperty('--gradient-4', 'rgb(255,255,255)');
+                }
+                
+                }
+            }
+    </script>
+    <script src="Scripts/Scripts.js"></script>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <script src="Scripts/gsap.min.js"></script>
+    <script src="Scripts/paper-core.min.js"></script>
+    <script src="Scripts/simplex-noise.min.js"></script>
+    <script src="Scripts/jquery.serialcursor.js"></script>
+    <script>
+    $(document).ready(function(){
+      // jquery.serialcursor initialisation
+      $('#serialcursor').serialcursor();
+      $(".page-container").fadeOut(5);
+      $(".page-container").fadeIn(300);
+    });
+    </script>
+  </body>
+</html>
