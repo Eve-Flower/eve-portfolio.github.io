@@ -201,3 +201,9 @@ div.desc {
     clear: both;
     
   }
+  /*discussion container*/
+  .discussion-container{
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 4rem;
+  }
