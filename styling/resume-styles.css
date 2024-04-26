@@ -201,8 +201,3 @@ div.desc {
     clear: both;
     
   }
-  /*disqus styling*/
-  #disqus_thread {
-    width: 100%;
-    height: 41rem;
-  }
